@@ -15,9 +15,6 @@
 [点击查看结构图](https://cdn.jsdelivr.net/gh/leishen6/ImgHosting/MuZiLei_blog_img/20201227215415.png)
 
 
-![](https://cdn.jsdelivr.net/gh/leishen6/ImgHosting/MuZiLei_blog_img/20201227215415.png)
-
-
 
 ## 启动测试：
 
