@@ -1,0 +1,170 @@
+[2020-12-27-21:19]  [main] INFO  com.lyl.SpringbootRedisApplication- Starting SpringbootRedisApplication on PC with PID 11236 (E:\Learn_Project\springboot_log\target\classes started by ASUS in E:\Learn_Project\springboot_log)
+[2020-12-27-21:19]  [main] INFO  com.lyl.SpringbootRedisApplication- The following profiles are active: db,log,mybatis,cleanLog,quartz
+[2020-12-27-21:19]  [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8081 (http)
+[2020-12-27-21:19]  [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+[2020-12-27-21:19]  [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.27]
+[2020-12-27-21:19]  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+[2020-12-27-21:19]  [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3367 ms
+[2020-12-27-21:19]  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure- Init DruidDataSource
+[2020-12-27-21:19]  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+[2020-12-27-21:19]  [main] INFO  com.lyl.logpool.LogPoolManager- LogPoolManager init successfully。。。。。。
+[2020-12-27-21:19]  [main] INFO  com.lyl.listener.InitServletContextListener-  日志异步池化处理启动成功. . . . . . .
+[2020-12-27-21:19]  [main] INFO  org.quartz.impl.StdSchedulerFactory- Using default implementation for ThreadExecutor
+[2020-12-27-21:19]  [main] INFO  org.quartz.simpl.SimpleThreadPool- Job execution threads will use class loader of thread: main
+[2020-12-27-21:19]  [main] INFO  org.quartz.core.SchedulerSignalerImpl- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[2020-12-27-21:19]  [main] INFO  org.quartz.core.QuartzScheduler- Quartz Scheduler v.2.3.2 created.
+[2020-12-27-21:19]  [main] INFO  org.quartz.simpl.RAMJobStore- RAMJobStore initialized.
+[2020-12-27-21:19]  [main] INFO  org.quartz.core.QuartzScheduler- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[2020-12-27-21:19]  [main] INFO  org.quartz.impl.StdSchedulerFactory- Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[2020-12-27-21:19]  [main] INFO  org.quartz.impl.StdSchedulerFactory- Quartz scheduler version: 2.3.2
+[2020-12-27-21:19]  [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+[2020-12-27-21:19]  [main] INFO  org.quartz.core.QuartzScheduler- Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[2020-12-27-21:19]  [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8081 (http) with context path ''
+[2020-12-27-21:19]  [main] INFO  com.lyl.SpringbootRedisApplication- Started SpringbootRedisApplication in 6.889 seconds (JVM running for 9.247)
+[2020-12-27-21:19]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:19]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:19]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-12-27-21:20]  [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+[2020-12-27-21:20]  [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 10 ms
+[2020-12-27-21:20]  [http-nio-8081-exec-1] INFO  com.lyl.controller.TestLogController- log test success !
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- begin drain log queue to database...
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- end drain log queue to database...
+[2020-12-27-21:20]  [pool-2-thread-1] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==>  Preparing: insert into t_test_log (logContent) values ( ? ) 
+[2020-12-27-21:20]  [pool-2-thread-1] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==> Parameters: test log , test log (String)
+[2020-12-27-21:20]  [pool-2-thread-1] DEBUG com.lyl.dao.TestLogDao.batchInsert- <==    Updates: 1
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [http-nio-8081-exec-2] INFO  com.lyl.controller.TestLogController- log test success !
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- begin drain log queue to database...
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- end drain log queue to database...
+[2020-12-27-21:20]  [pool-2-thread-2] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==>  Preparing: insert into t_test_log (logContent) values ( ? ) 
+[2020-12-27-21:20]  [pool-2-thread-2] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==> Parameters: test log , test log (String)
+[2020-12-27-21:20]  [pool-2-thread-2] DEBUG com.lyl.dao.TestLogDao.batchInsert- <==    Updates: 1
+[2020-12-27-21:20]  [http-nio-8081-exec-3] INFO  com.lyl.controller.TestLogController- log test success !
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:20]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:20]  [http-nio-8081-exec-4] INFO  com.lyl.controller.TestLogController- log test success !
+[2020-12-27-21:20]  [http-nio-8081-exec-5] INFO  com.lyl.controller.TestLogController- log test success !
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- begin drain log queue to database...
+[2020-12-27-21:20]  [pool-1-thread-1] INFO  com.lyl.logpool.LogPoolManager- end drain log queue to database...
+[2020-12-27-21:20]  [pool-2-thread-3] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==>  Preparing: insert into t_test_log (logContent) values ( ? ) , ( ? ) , ( ? ) 
+[2020-12-27-21:20]  [pool-2-thread-3] DEBUG com.lyl.dao.TestLogDao.batchInsert- ==> Parameters: test log , test log (String), test log , test log (String), test log , test log (String)
+[2020-12-27-21:20]  [pool-2-thread-3] DEBUG com.lyl.dao.TestLogDao.batchInsert- <==    Updates: 3
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:21]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:22]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:23]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-10] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:24]  [DefaultQuartzScheduler_Worker-1] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-2] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-3] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-4] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-5] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-6] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:25]  [DefaultQuartzScheduler_Worker-7] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-8] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==>  Preparing: SELECT createts FROM t_test_log where createts < ? order by createts desc limit ? 
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- ==> Parameters: 2020-12-26 21:19:48(String), 1000(Integer)
+[2020-12-27-21:26]  [DefaultQuartzScheduler_Worker-9] DEBUG com.lyl.dao.LogCleanDao.selectTime- <==      Total: 0

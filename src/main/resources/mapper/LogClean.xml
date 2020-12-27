@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyl.dao.LogCleanDao">
+
+
+    <select id="selectTime" parameterType="com.lyl.bean.LogCleanBean" resultType="string">
+        SELECT ${fieldName} FROM ${tableName} where ${fieldName}  <![CDATA[< ]]> #{minTime} order by ${fieldName} desc limit #{batchCleanCount}
+    </select>
+
+
+    <delete id="logBatchClean" parameterType="com.lyl.bean.LogCleanBean">
+        delete from ${tableName} where ${fieldName} <![CDATA[ >= ]]> #{minTime} and ${fieldName} <![CDATA[<= ]]> #{maxTime}
+    </delete>
+
+</mapper>
