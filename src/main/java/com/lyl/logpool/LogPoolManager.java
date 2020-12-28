@@ -138,10 +138,11 @@ public class LogPoolManager {
      *  将日志放入到 队列中
      * @param testLogBean
      */
-    public void addLog(TestLogBean testLogBean) {
+    public void addLog(TestLogBean testLogBean)
+            throws Exception {
         if (logCount.get() >= MAX_QUEUE_SIZE) {
-            logger.error("Warning.. Log count exceed log queue's max size ！");
-            return;
+            // 当队列满时，直接将日志丢弃，并抛出异常
+            throw new Exception("rejected .. Log count exceed log queue's max size ！");
         }
         // 将日志放入 任务队列中，放入成功返回true
         this.queue.offer(testLogBean);
@@ -151,10 +152,10 @@ public class LogPoolManager {
 
 
     /**
-     *  关闭 日志池
+     *  关闭 线程池
      */
     public void shutdown() {
-        logger.info("LogPoolManager shutdown...");
+        logger.info("LogPoolManager Thread Pool shutdown...");
         // 结束while循环
         run.set(false);
         // 关闭线程池

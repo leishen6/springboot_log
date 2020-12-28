@@ -1,5 +1,6 @@
 package com.lyl.listener;
 
+import com.lyl.logclean.CleanManager;
 import com.lyl.logpool.LogPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,9 @@ public class InitServletContextListener implements ServletContextListener {
     @Autowired
     private LogPoolManager logPoolManager;
 
+    @Autowired
+    private CleanManager cleanManager;
+
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -38,7 +42,8 @@ public class InitServletContextListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        // 关闭 日志池化
+        // 关闭线程池
         logPoolManager.shutdown();
+        cleanManager.shutdown();
     }
 }

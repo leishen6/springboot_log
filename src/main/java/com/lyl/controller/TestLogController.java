@@ -33,9 +33,13 @@ public class TestLogController {
         TestLogBean testLogBean = new TestLogBean();
         testLogBean.setLogContent("test log , test log ");
         // 将业务日志放入到队列中，然后使用线程 异步 批量进行入库，以提升接口的响应速度
-        logPoolManager.addLog(testLogBean);
+        try {
+            logPoolManager.addLog(testLogBean);
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+        }
 
-        logger.info("log test success !");
+        logger.info("log offer queue success !");
     }
 
 }

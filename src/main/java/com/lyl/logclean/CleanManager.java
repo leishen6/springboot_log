@@ -4,6 +4,8 @@ import cn.hutool.setting.dialect.Props;
 import com.lyl.bean.LogCleanBean;
 import com.lyl.service.LogCleanService;
 import com.lyl.utils.DateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,21 +23,28 @@ import java.util.concurrent.Executors;
 @Component("cleanManager")
 public class CleanManager {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private LogCleanService logCleanService;
 
-    private static ExecutorService executorService;
+    private static ExecutorService cleanManagerThreadPool;
     private static Props props = new Props("application-cleanLog.properties");
 
-    private static LogCleanBean logCleanBean;
+    private static LogCleanBean logCleanBean = new LogCleanBean();
 
     static {
+        // 获取配置的线程数大小
         int threadNum = props.getInt("threads.pool.num");
-        executorService = Executors.newFixedThreadPool(threadNum);
-        logCleanBean = new LogCleanBean();
+        // 创建 固定线程数的线程池
+        cleanManagerThreadPool = Executors.newFixedThreadPool(threadNum);
+        // 每次清理日志时的数据量
         logCleanBean.setBatchCleanCount(props.getInt("log.clean.batchCount"));
+        // 清理的表
         logCleanBean.setTableName(props.getStr("log.clean.table"));
+        // 根据日志清理的字段
         logCleanBean.setFieldName(props.getStr("log.clean.filed"));
+        // 什么时间的日志可以被清理
         logCleanBean.setMinTime(DateUtil.getBeforeTime(props.getInt("log.clean.dateNum")));
     }
 
@@ -45,6 +54,7 @@ public class CleanManager {
      */
     public void cleanLogStart(){
 
+        // 循环进行日志清理的次数
         int whileNum = props.getInt("log.clean.batchNum");
 
         while (whileNum > 0){
@@ -70,9 +80,21 @@ public class CleanManager {
                 break;
             }
             // 进行多线程处理
-            executorService.execute(new CleanThread(this.logCleanService, logClean));
+            cleanManagerThreadPool.execute(new CleanThread(this.logCleanService, logClean));
         }
+    }
 
+
+    /**
+     *  关闭 线程池
+     */
+    public void shutdown() {
+        logger.info("CleanManager Thread Pool shutdown...");
+        /**
+         *  关闭线程池
+         *  调用了shutdownNow()方法后，线程池将不能接受新任务，也不会处理队列中的任务，并且会中断正在处理任务的线程
+         */
+        cleanManagerThreadPool.shutdownNow();
     }
 
 }
