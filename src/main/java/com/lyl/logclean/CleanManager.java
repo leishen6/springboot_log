@@ -56,25 +56,28 @@ public class CleanManager {
 
         // 循环进行日志清理的次数
         int whileNum = props.getInt("log.clean.batchNum");
+        LogCleanBean logClean = null;
 
         while (whileNum > 0){
-            LogCleanBean logClean = null;
 
+            // 查询符合每次删除数据量的时间段
             List<String> list = logCleanService.selectTime(logCleanBean);
             if (list != null && list.size() > 0){
                 logClean = new LogCleanBean();
                 logClean.setTableName(logCleanBean.getTableName());
                 logClean.setFieldName(logCleanBean.getFieldName());
+                // 获取可以删除日志的最小生成时间
                 logClean.setMinTime(list.get(list.size()-1));
+                // 获取可以删除日志的最大生成时间
                 logClean.setMaxTime(list.get(0));
                 logCleanBean.setMinTime(logClean.getMinTime());
 
-                // 清理次数进行递减
-                --whileNum;
-
-                // 此次查询已经不足设置的批量清理的数据量了，所以已经清理干净了
+                // 此次查询已经不满足设置的每次清理的数据量大小了，说明已经清理干净了
                 if (list.size() < logCleanBean.getBatchCleanCount()){
                     whileNum = 0;
+                }else {
+                    // 清理次数进行递减
+                    --whileNum;
                 }
             }else {
                 break;
